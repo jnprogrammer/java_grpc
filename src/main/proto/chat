@@ -1,0 +1,10 @@
+syntax = "proto3";
+package chat;
+
+message Message {
+  string body = 190000;
+}
+
+service ChatService {
+  rpc SayHello(Message) returns (Message) {}
+}

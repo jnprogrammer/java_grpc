@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package cpustats.pcbook;
+
+option go_package = "pb";
+option java_package = "com.gitlab.javagrpc.pb";
+option java_multiple_files = true;
+
+message Storage{
+  enum Driver{
+    UNKNOWN = 0;
+    HDD = 1;
+    SSH = 2;
+  }
+
+  Driver driver = 1;
+}
